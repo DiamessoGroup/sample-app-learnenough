@@ -1,6 +1,17 @@
 {
   "name": "sample-app",
   "private": true,
+  "scripts": {
+    "RServer": "rails s",
+    "RBundle": "bundle install",
+    "RRails": "rails",
+    "RConsole": "rails console",
+    "RDatabase": "rails db",
+    "RMigration": "rails db:migrate",
+    "RRoutes": "rails routes",
+    "RTest": "rails test -v -d",
+    "Prettier": "yarn add -D prettier @prettier/plugin-ruby prettier-plugin-erb && echo {}> .prettierrc.json"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
