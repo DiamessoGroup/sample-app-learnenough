@@ -60,6 +60,10 @@ class UserTest < ActiveSupport::TestCase
     assert_not(@user.valid?, 'Password should have a minimum 6 characters length')
   end
 
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
+
 end
 
 
