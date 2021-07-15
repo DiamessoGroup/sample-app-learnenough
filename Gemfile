@@ -1,21 +1,25 @@
+# frozen_string_literal: true
 
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'active_storage_validations', '0.8.9'
 gem 'bcrypt'
 gem 'bootsnap', '1.7.2', require: false
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'faker'
-gem 'jbuilder',   '2.10.0'
+gem 'image_processing'
+gem 'jbuilder', '2.10.0'
+gem 'mini_magick'
 gem 'puma',       '5.3.1'
 gem 'rails',      '6.1.3.2'
 gem 'sass-rails', '6.0.0'
 gem 'turbolinks', '5.2.1'
 gem 'webpacker',  '5.2.1'
-gem "will_paginate"
+gem 'will_paginate'
 
 group :development, :test do
-  gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug',  '11.1.3', platforms: %i[mri mingw x64_mingw]
   gem 'sqlite3', '1.4.2'
 end
 
@@ -39,6 +43,7 @@ end
 
 group :production do
   gem 'pg', '1.2.3'
+  gem 'aws-sdk-s3', '1.87.0', require: false
 end
 
 gem 'rexml', '~> 3.2', '>= 3.2.5'
